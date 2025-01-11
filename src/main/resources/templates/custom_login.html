@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Login Page</title>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        body {
+          font-family: 'Arial', sans-serif;
+          background: linear-gradient(135deg, #6a11cb, #2575fc);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          color: #333;
+        }
+
+        .login-container {
+          background: #fff;
+          padding: 40px;
+          border-radius: 15px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+          text-align: center;
+          max-width: 400px;
+          width: 100%;
+        }
+
+        .login-container h1 {
+          font-size: 2rem;
+          margin-bottom: 20px;
+          color: #6a11cb;
+        }
+
+        .login-container p {
+          font-size: 0.9rem;
+          color: #666;
+          margin-bottom: 30px;
+        }
+
+        .login-container input {
+          width: 100%;
+          padding: 10px;
+          margin: 10px 0;
+          border: 1px solid #ccc;
+          border-radius: 10px;
+          font-size: 1rem;
+        }
+
+        .login-container button {
+          width: 100%;
+          padding: 10px;
+          background: linear-gradient(90deg, #6a11cb, #2575fc);
+          border: none;
+          border-radius: 10px;
+          color: #fff;
+          font-size: 1rem;
+          cursor: pointer;
+          transition: background 0.3s;
+        }
+
+        .login-container button:hover {
+          background: linear-gradient(90deg, #2575fc, #6a11cb);
+        }
+
+        .login-container .forgot-password {
+          display: block;
+          margin-top: 15px;
+          font-size: 0.9rem;
+          color: #6a11cb;
+          text-decoration: none;
+          transition: color 0.3s;
+        }
+
+        .login-container .forgot-password:hover {
+          color: #2575fc;
+        }
+    </style>
+</head>
+<body>
+<div class="login-container">
+    <h1>Login</h1>
+    <p>Welcome back! Please enter your credentials to log in.</p>
+    <form action="/login" method="post">
+        <input type="text" placeholder="Username" name="username" required>
+        <input type="password" placeholder="Password" name="password"  required>
+        <button type="submit">Login</button>
+    </form>
+</div>
+</body>
+</html>

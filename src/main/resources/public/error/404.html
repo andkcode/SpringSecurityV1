@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 8rem;
+            font-weight: bold;
+            color: #ffdd59;
+            margin-bottom: 20px;
+            animation: glow 2s infinite alternate;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: #d1d8e0;
+        }
+
+        button {
+            display: inline-block;
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            color: #2a5298;
+            background: #ffdd59;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .animation-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            border-radius: 50%;
+            animation: twinkle 4s infinite ease-in-out;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .star.small {
+            width: 5px;
+            height: 5px;
+        }
+
+        .star.medium {
+            width: 10px;
+            height: 10px;
+        }
+
+        .star.large {
+            width: 15px;
+            height: 15px;
+        }
+
+        .star:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-duration: 6s;
+        }
+
+        .star:nth-child(2) {
+            top: 40%;
+            left: 70%;
+            animation-duration: 8s;
+        }
+
+        .star:nth-child(3) {
+            top: 80%;
+            left: 50%;
+            animation-duration: 5s;
+        }
+
+        .star:nth-child(4) {
+            top: 60%;
+            left: 30%;
+            animation-duration: 7s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #ffdd59, 0 0 20px #ffdd59;
+            }
+            to {
+                text-shadow: 0 0 20px #ffdd59, 0 0 30px #ffdd59;
+            }
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(0.8);
+                opacity: 0.6;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>404</h1>
+    <p>Oops! The page you're looking for doesn't exist.</p>
+    <button onclick="window.location.href = '/home'">Go Back to Home</button>
+</div>
+
+<div class="animation-container">
+    <div class="star small"></div>
+    <div class="star medium"></div>
+    <div class="star large"></div>
+    <div class="star medium"></div>
+</div>
+</body>
+</html>

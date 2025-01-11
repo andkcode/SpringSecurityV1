@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>403 Forbidden</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            color: #333;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 5rem;
+            font-weight: bold;
+            color: #ff5e62;
+            margin-bottom: 20px;
+            animation: bounce 1.5s infinite;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        button {
+            display: inline-block;
+            padding: 10px 25px;
+            font-size: 1rem;
+            color: #fff;
+            background: #ff5e62;
+            text-decoration: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .animation-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            animation: float 10s infinite ease-in-out;
+            background: rgba(255, 94, 98, 0.5);
+        }
+
+        .circle.small {
+            width: 100px;
+            height: 100px;
+            top: 10%;
+            left: 15%;
+        }
+
+        .circle.medium {
+            width: 200px;
+            height: 200px;
+            top: 50%;
+            left: 70%;
+        }
+
+        .circle.large {
+            width: 300px;
+            height: 300px;
+            top: 80%;
+            left: 30%;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>403</h1>
+    <p>Forbidden - You don’t have permission to access this page.</p>
+    <button onclick="window.location.href = '/home';">Go Back to Home</button>
+</div>
+
+<div class="animation-container">
+    <div class="circle small"></div>
+    <div class="circle medium"></div>
+    <div class="circle large"></div>
+</div>
+</body>
+</html>
