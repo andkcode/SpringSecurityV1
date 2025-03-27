@@ -19,7 +19,7 @@ SpringSecurityV1 is a web application that demonstrates basic secure authenticat
 - PostgreSQL
 
 ### Authentication
-- JWT, OAuth2, OpenID Connect
+- Basic Authentication
 
 ### Storage
 - Local storage
